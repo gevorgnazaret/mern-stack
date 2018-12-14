@@ -3,7 +3,7 @@ import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import uuid from 'uuid';
 import { connect } from 'react-redux';
-import { getItems } from '../actions/itemActions';
+import { getItems, deleteItem } from '../actions/itemActions';
 import PropTypes from 'prop-types';
 
 
@@ -69,4 +69,4 @@ const mapStateToProps = (state) => ({
     item: state.item
 });
 
-export default connect(mapStateToProps, { getItems })(ShoppingList);
+export default connect(mapStateToProps, { getItems, deleteItem })(ShoppingList);
