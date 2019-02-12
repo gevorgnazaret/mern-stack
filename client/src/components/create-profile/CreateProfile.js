@@ -59,6 +59,7 @@ class CreateProfile extends Component {
     };
 
     this.props.createProfile(profileData, this.props.history);
+    console.log("working!");
   }
 
   onChange(e) {
