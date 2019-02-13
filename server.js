@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 const db = require('./config/keys').mongoURI;
 
 mongoose
-    .connect(db)
+    .connect(db, { useNewUrlParser: true })
     .then(() => console.log('MongoDB connected...'))
     .catch(err => console.log(err));
 
@@ -28,7 +28,7 @@ app.use(passport.initialize());
 
 // Passport Config
 require('./config/passport')(passport);
- 
+
 
 app.use('/api/items', items);
 app.use('/api/users', users);
