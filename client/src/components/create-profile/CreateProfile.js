@@ -14,11 +14,11 @@ class CreateProfile extends Component {
     this.state = {
       displaySocialInputs: false,
       handle: '',
-      company: '',
-      website: '',
+      sport: '',
+      team: '',
       location: '',
       status: '',
-      skills: '',
+      players: '',
       githubusername: '',
       bio: '',
       twitter: '',
@@ -44,11 +44,11 @@ class CreateProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
-      company: this.state.company,
-      website: this.state.website,
+      sport: this.state.sport,
+      team: this.state.team,
       location: this.state.location,
       status: this.state.status,
-      skills: this.state.skills,
+      players: this.state.players,
       githubusername: this.state.githubusername,
       bio: this.state.bio,
       twitter: this.state.twitter,
@@ -164,20 +164,20 @@ class CreateProfile extends Component {
                   info="Give us an idea of where you are at in your career"
                 />
                 <TextFieldGroup
-                  placeholder="Company"
-                  name="company"
-                  value={this.state.company}
+                  placeholder="Sport"
+                  name="Sport"
+                  value={this.state.sport}
                   onChange={this.onChange}
-                  error={errors.company}
-                  info="Could be your own company or one you work for"
+                  error={errors.sport}
+                  info="Sport"
                 />
                 <TextFieldGroup
-                  placeholder="Website"
-                  name="website"
-                  value={this.state.website}
+                  placeholder="team"
+                  name="team"
+                  value={this.state.team}
                   onChange={this.onChange}
-                  error={errors.website}
-                  info="Could be your own website or a company one"
+                  error={errors.team}
+                  info="team"
                 />
                 <TextFieldGroup
                   placeholder="Location"
@@ -188,11 +188,11 @@ class CreateProfile extends Component {
                   info="City or city & state suggested (eg. Boston, MA)"
                 />
                 <TextFieldGroup
-                  placeholder="* Skills"
-                  name="skills"
-                  value={this.state.skills}
+                  placeholder="* Players"
+                  name="Players"
+                  value={this.state.players}
                   onChange={this.onChange}
-                  error={errors.skills}
+                  error={errors.players}
                   info="Please use comma separated values (eg.
                     HTML,CSS,JavaScript,PHP"
                 />

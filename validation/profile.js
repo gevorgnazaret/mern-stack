@@ -6,7 +6,7 @@ module.exports = function validateProfileInput(data) {
 
   data.handle = !isEmpty(data.handle) ? data.handle : '';
   data.status = !isEmpty(data.status) ? data.status : '';
-  data.skills = !isEmpty(data.skills) ? data.skills : '';
+  data.players = !isEmpty(data.players) ? data.players : '';
 
   if (!Validator.isLength(data.handle, { min: 2, max: 40 })) {
     errors.handle = 'Handle needs to between 2 and 4 characters';
@@ -20,11 +20,11 @@ module.exports = function validateProfileInput(data) {
     errors.status = 'Status field is required';
   }
 
-  if (Validator.isEmpty(data.skills)) {
-    errors.skills = 'Skills field is required';
+  if (Validator.isEmpty(data.players)) {
+    errors.skills = 'Players field is required';
   }
 
-  if (!isEmpty(data.website)) {
+  if (!isEmpty(data.team)) {
     if (!Validator.isURL(data.website)) {
       errors.website = 'Not a valid URL';
     }

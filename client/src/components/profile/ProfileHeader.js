@@ -22,8 +22,8 @@ class ProfileHeader extends Component {
               <h1 className="display-4 text-center">{profile.user.name}</h1>
               <p className="lead text-center">
                 {profile.status}{' '}
-                {isEmpty(profile.company) ? null : (
-                  <span>at {profile.company}</span>
+                {isEmpty(profile.sport) ? null : (
+                  <span>at {profile.sport}</span>
                 )}
               </p>
               {isEmpty(profile.location) ? null : <p>{profile.location}</p>}
@@ -31,7 +31,7 @@ class ProfileHeader extends Component {
                 {isEmpty(profile.website) ? null : (
                   <a
                     className="text-white p-2"
-                    href={profile.website}
+                    href={profile.team}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

@@ -21,6 +21,8 @@ class Posts extends Component {
       postContent = <PostFeed posts={posts} />;
     }
 
+    console.log(this.state);
+
     return (
       <div className="feed">
         <div className="container">

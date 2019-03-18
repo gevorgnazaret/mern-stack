@@ -17,8 +17,8 @@ class ProfileItem extends Component {
             <h3>{profile.user.name}</h3>
             <p>
               {profile.status}{' '}
-              {isEmpty(profile.company) ? null : (
-                <span>at {profile.company}</span>
+              {isEmpty(profile.sport) ? null : (
+                <span>at {profile.sport}</span>
               )}
             </p>
             <p>
@@ -33,10 +33,10 @@ class ProfileItem extends Component {
           <div className="col-md-4 d-none d-md-block">
             <h4>Skill Set</h4>
             <ul className="list-group">
-              {profile.skills.slice(0, 4).map((skill, index) => (
+              {profile.players.slice(0, 4).map((player, index) => (
                 <li key={index} className="list-group-item">
                   <i className="fa fa-check pr-1" />
-                  {skill}
+                  {player}
                 </li>
               ))}
             </ul>
